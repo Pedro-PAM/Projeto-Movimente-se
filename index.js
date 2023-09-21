@@ -6,10 +6,10 @@ function exibirTexto(){
     },0);
     setTimeout(() =>{
         text.textContent = texto[1];
-    },3000);
+    },4000);
     setTimeout(() =>{
         text.textContent = texto[2];
-    },6000);
+    },8000);
 
 }
 
