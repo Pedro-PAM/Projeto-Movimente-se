@@ -6,6 +6,7 @@
 
 body{
     background-color: #FFFFFF;    
+    overflow:hidden;
 }
 
 .header{
@@ -73,10 +74,38 @@ body{
     flex: 1; /* Cada div ocupa 50% do espaço disponível */
 }
 
+.image-container{
+    z-index: 9999; /* Garante que o before nunca fique na frente da imagem */
+}
+
 .text-container{
     background-color: #F68221;        
     text-align: center;
     max-width:50%;
+}
+
+.textos{
+    font-size:24px;
+}
+.textos:before{
+    content:"";
+    background-color: #F68221;
+    position:absolute;
+    left:20%;
+    height:20%;
+    width:50%;
+    border-left: 2px solid #F68221;   
+    animation: animate 4s steps(12) infinite; /* Animação da box "invisível */
+
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 60%;
+    }
+    60%{
+        left:0%;
+    }
 }
 
 .image-container{
@@ -119,3 +148,4 @@ body{
     font-size:16px;
     text-align: center;    
 }
+

@@ -1,15 +1,19 @@
-const texto = ["evolução", "desenvolvimento humano","plenitude pelo esporte"]
-
-function exibirTexto(cont){
-    const text = document.getElementById("textos");
-    for (i=0; i<=texto.length; i++){
-        text.innerHTML = texto[i];
-        return text;
-    }
+const texto = ["evolução","desenvolvimento humano","plenitude pelo esporte"]
+const text = document.querySelector(".textos");
+function exibirTexto(){    
+    setTimeout(() =>{
+        text.textContent = texto[0];
+    },0);
+    setTimeout(() =>{
+        text.textContent = texto[1];
+    },3000);
+    setTimeout(() =>{
+        text.textContent = texto[2];
+    },6000);
 
 }
-setInterval(() =>{
-    exibirTexto();
-},3000)
+
+exibirTexto();
 
 
+setInterval(exibirTexto,6000);
