@@ -135,13 +135,13 @@ body{
     
     width:40%;
     margin-left:30%;
-    position:absolute;
 }
 .about img{
     border-radius: 30px;    
     border-style: none;
-    width:100%;
-    margin-right:30%;
+    width:120%;
+    margin-top:5vh;
+    margin-left:35%;
 
 }
 
@@ -150,3 +150,26 @@ body{
     text-align: center;    
 }
 
+.sobre{    
+    padding:0;
+    margin-top: 0;
+    position: absolute    ;
+    top:150vh;    
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 0.3s; 
+
+}
+
+.sobre li{    
+    width:50vh;
+    height:10vh;    
+    border-radius: 15px;
+    border-color:#F68221;
+    background-color:#F68221;
+    color:#FFFFFF;
+    text-shadow: 1px 1px 2px gray;    
+}
