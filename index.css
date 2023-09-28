@@ -83,34 +83,38 @@ body{
     max-width:50%;
 }
 
+/* animação do texto */
+
 .textos{
-    font-size:24px;
-    text-align: left;
+    font-size:24px;    
 }
-.textos:before{
+
+.textos::before{
     content:"";
-    background-color: #F68221;
+    background: #FFFFFF;        
     position:absolute;
-    left:20%;
-    height:20%;
-    width:40%;
-    border-left: 2px solid #FFFFFF;   
-    animation: animate 4s steps(12) infinite; /* Animação da box "invisível */
-
+    margin-top:0;        
+    top:57%;               
+    height: 24px;
+    width: 2px;    
+    transform: translateY(-65%);
+    animation: blink 0.7s infinite; /* Animação "pisca pisca" */
 }
 
-@keyframes animate{
-    40%, 60%{
-        left: 60%;
-    }
-    60%{
-        left:0%;
+.textos.stop-blinking::before {
+    animation: none;    
+}
+
+
+@keyframes blink{
+    50%{
+        opacity: 0;        
+        background: transparent ;
     }
 }
 
 .image-container{
-    max-width: 50%;
-    
+    max-width: 50%;    
 }
 
 
